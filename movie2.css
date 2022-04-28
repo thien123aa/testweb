@@ -1,0 +1,156 @@
+.khunglogo {
+    display: flex;
+}
+
+.khungsearch {
+    margin-left: auto;
+}
+
+.top-search .input {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.tenphim {
+    color: white;
+}
+
+.thongtin {
+    justify-content: center;
+    padding-left: 60px;
+}
+
+.dstapphim {
+    display: flex;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-color: white;
+}
+
+.tapphim {
+    border-left: 1px solid;
+    border-color: white;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    display: flex;
+}
+
+.sotap {
+    background-color: #fafafa;
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 5px 7px;
+    background-color: #fafafa;
+    border: 1px solid transparent;
+    transition: 0.5s;
+    margin-right: 10px;
+}
+
+.sotap:hover {
+    background-color: blue;
+}
+
+.server {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.khungphim {
+    background-image: url("4.jpg");
+    width: 100%;
+    height: 500px;
+}
+
+@media (max-width: 990px)and (min-width: 576px) {
+    .anhphim {
+        padding-top: 100px;
+    }
+}
+
+.ttphu .row {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 70px;
+}
+
+.ttp {
+    color: #abb7c4;
+    padding: 7px;
+    font-family: taho;
+}
+
+.stars {
+    background-color: #abb7c4;
+}
+
+.stars .saovang {
+    color: yellow;
+}
+
+.lc_rate .row {
+    padding-left: 80px;
+}
+
+.col-12.col-sm-4.col-lg-3 {
+    padding-top: 40px;
+}
+
+.row.review {
+    justify-content: center;
+    padding-top: 50px;
+    display: flex;
+}
+
+a.nd {
+    color: yellow;
+    font-size: 39px;
+    padding-bottom: 30px;
+    border-bottom: 10px solid;
+}
+
+.ndreview {
+    padding-top: 50px;
+    color: #abb7c4;
+}
+
+.button {
+    width: 105px;
+    height: 33px;
+    padding-left: 50px;
+    text-decoration: none;
+    padding-right: 50px;
+    background-color: white;
+    border-color: pink;
+    font-size: 25px;
+    color: #f98ea0;
+    transition: 0.6s;
+}
+
+button:hover {
+    background-color: pink;
+    color: white;
+}
+
+#giaphim {
+    text-align: center;
+}
+
+button.btn.btn-primary {
+    height: 30px;
+}

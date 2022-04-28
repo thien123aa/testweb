@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/df5cc63e78.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movie.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script language="javascript" src="movie.js"></script>
+    <title>themoviebox.com</title>
+    <style>
+        .logo {
+            position: absolute !important;
+            z-index: 1;
+            color: white;
+        }
+        
+        .nut {
+            position: absolute !important;
+            z-index: 1;
+            right: 0;
+        }
+        
+        .icon {
+            margin-left: 50px;
+            color: white;
+            background-color: black;
+            border: none;
+            font-size: 20px;
+        }
+        
+        .nut1 {
+            margin-left: 20px;
+            margin-right: 20px;
+            color: white;
+            background-color: black;
+            border: none;
+            font-size: 20px;
+        }
+        
+        .nut2 {
+            margin-right: 50px;
+            color: white;
+            background-color: rgb(196, 42, 101);
+            border: none;
+            font-size: 20px;
+        }
+        
+        .khoibanner {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .khungtd {
+            position: absolute;
+            z-index: 1;
+            bottom: 130px;
+            left: 100px;
+            color: white;
+        }
+        
+        p {
+            font-size: 12px;
+            font-family: Arial;
+            margin: 5px;
+            color: #343232;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .khungphim {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body onload="load()">
+    <div class="page">
+        <div class="banner">
+            <div class="container-fluid khoibanner">
+
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <div class="logo" style="font-size:30px;">
+                        <a>THE MOVIE BOX</a>
+                    </div>
+                    <div class="nut">
+                        <button class="icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button class="nut1">LOG IN</button>
+                        <button class="nut2">SIGN UP</button>
+
+                    </div>
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <img src="1.jpg" alt="" width="100%" height="400px;">
+                            <div class="container khungtd">
+                                <h3 style="font-weight: bold;">WRATH OF THE TITANS
+                                    <h3>
+                                        <a href="" style="color: white;font-size:20px;">fantasy</a>
+                                        <a href="" style="color: white; font-size:20px;">animation</a>
+                                        <a href="" style="color: white;font-size:20px;">family | </a>
+                                        <span style="color: white;font-size:20px;">Duration:1h52m</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="1.jpg" alt="" width="100%" height="400px;">
+                            <div class="container khungtd">
+                                <h3 style="font-weight: bold;">WRATH OF THE TITANS
+                                    <h3>
+                                        <a href="" style="color: white;font-size:20px;">fantasy</a>
+                                        <a href="" style="color: white; font-size:20px;">animation</a>
+                                        <a href="" style="color: white;font-size:20px;">family | </a>
+                                        <span style="color: white;font-size:20px;">Duration:1h52m</span>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="1.jpg" alt="" width="100%" height="400px;">
+                            <div class="container khungtd">
+                                <h3 style="font-weight: bold;">WRATH OF THE TITANS
+                                    <h3>
+                                        <a href="" style="color: white;font-size:20px;">fantasy</a>
+                                        <a href="" style="color: white; font-size:20px;">animation</a>
+                                        <a href="" style="color: white;font-size:20px;">family | </a>
+                                        <span style="color: white;font-size:20px;">Duration:1h52m</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- hetkhoibaner -->
+    <div class="container-fluid" style="background-color: rgb(255 255 255);" widtth="100%">
+
+        <ul class="nav nav-tabs ">
+            <li class="nav-item " style="color: violet; ;">
+                <a class="nav-link active" id="theloai" onclick="popular()">Popular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="theloai" onclick="top_rated()">top rated</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="theloai" onclick="upcoming()">Upcoming</a>
+            </li>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Genre</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">anime</a></li>
+                <li><a class="dropdown-item" href="#">disney</a></li>
+                <li><a class="dropdown-item" href="#">Viet Nam</a></li>
+            </ul>
+        </ul>
+
+
+        <div class="container khoiphim " style="margin-top:13px">
+            <div class="row" id="dsphim"></div>
+            <div><i class="fa-solid fa-cart-shopping"></i></div>
+
+        </div>
+        <div class="wrapper">
+            <button class="button" onclick="loadmore()">Xem them</button>
+        </div>
+    </div>
+
+    </div>
+    <div class="footer">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-sm-8 text-muted">
+                    @ 2014 company inc. privacy . Terms
+                </div>
+                <div class="col-sm-4 text-right">
+                    <a href="#">back to top</a>
+                </div>
+
+                <hr class="mt-3 mb-3">
+
+                <div class="col-sm-8 text-muted">
+                    @ 2014 company inc. privacy . Terms
+                </div>
+                <div class="col-sm-4 text-right">
+                    <a href="#">back to top</a>
+                </div>
+            </div>
+
+</body>
+
+</html>

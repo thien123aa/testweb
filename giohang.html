@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script language="javascript" src="giohang.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/df5cc63e78.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="giohang.css">
+    <title>Document</title>
+</head>
+
+<body onload="loadgiohang();tongtien()" style="background-color: #031c34;">
+    <div class="khoigiohang">
+        <div class="header">
+            <div class="banner">
+                <span style="color: white; font-family: Arial; font-weight: bold; font-size: 20px;"> THE BOX MOVIE | GIO HANG </span>
+            </div>
+            <div class="khungsearch">
+                <form action="" class="top-search">
+                    <div class="input">
+                        <input class="form-input"><i class="fa fa-search icon"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="anhnen">
+            <div class="khoisp">
+                <div class="ttgiohang">
+                    <div class="sp">San pham</div>
+                    <div class="dg">Don gia</div>
+                    <div class="sl">so luong</div>
+                </div>
+                <div id="giohang">
+                </div>
+                <div id="thanhtoan">
+                    <div id="td">
+                        <h3>tong tien thanh toan :</h3>
+                    </div>
+                    <div><input id="tongtien" type="number"></div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
