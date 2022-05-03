@@ -56,6 +56,7 @@
         .khoibanner {
             padding: 0px;
             margin: 0px;
+            position: relative;
         }
         
         .khungtd {
@@ -80,14 +81,21 @@
             text-decoration: none;
         }
     </style>
+    <script>
+        var url_string = "" + window.location.href
+        var url = new URL(url_string);
+        var loaiphim = url.searchParams.get("danhmuc")
+        console.log(loaiphim)
+    </script>
 </head>
 
-<body onload="load()">
+<body onload="load(loaiphim)">
     <div class="page">
         <div class="banner">
             <div class="container-fluid khoibanner">
 
-                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <div id="demo" class="carousel-slide" data-ride="carousel">
                     <div class="logo" style="font-size:30px;">
                         <a>THE MOVIE BOX</a>
                     </div>
@@ -97,57 +105,57 @@
                         <button class="nut2">SIGN UP</button>
 
                     </div>
-                    <ul class="carousel-indicators">
-                        <li data-target="#demo" data-slide-to="0" class="active"></li>
-                        <li data-target="#demo" data-slide-to="1"></li>
-                        <li data-target="#demo" data-slide-to="2"></li>
-                    </ul>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active ">
-                            <img src="1.jpg" alt="" width="100%" height="400px;">
-                            <div class="container khungtd">
-                                <h3 style="font-weight: bold;">WRATH OF THE TITANS
-                                    <h3>
-                                        <a href="" style="color: white;font-size:20px;">fantasy</a>
-                                        <a href="" style="color: white; font-size:20px;">animation</a>
-                                        <a href="" style="color: white;font-size:20px;">family | </a>
-                                        <span style="color: white;font-size:20px;">Duration:1h52m</span>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="1.jpg" alt="" width="100%" height="400px;">
-                            <div class="container khungtd">
-                                <h3 style="font-weight: bold;">WRATH OF THE TITANS
-                                    <h3>
-                                        <a href="" style="color: white;font-size:20px;">fantasy</a>
-                                        <a href="" style="color: white; font-size:20px;">animation</a>
-                                        <a href="" style="color: white;font-size:20px;">family | </a>
-                                        <span style="color: white;font-size:20px;">Duration:1h52m</span>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="1.jpg" alt="" width="100%" height="400px;">
-                            <div class="container khungtd">
-                                <h3 style="font-weight: bold;">WRATH OF THE TITANS
-                                    <h3>
-                                        <a href="" style="color: white;font-size:20px;">fantasy</a>
-                                        <a href="" style="color: white; font-size:20px;">animation</a>
-                                        <a href="" style="color: white;font-size:20px;">family | </a>
-                                        <span style="color: white;font-size:20px;">Duration:1h52m</span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
                 </div>
-            </div>
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <img src="1.jpg" alt="" width="100%" height="400px;">
+                        <div class="container khungtd">
+                            <h3 style="font-weight: bold;">WRATH OF THE TITANS
+                                <h3>
+                                    <a href="" style="color: white;font-size:20px;">fantasy</a>
+                                    <a href="" style="color: white; font-size:20px;">animation</a>
+                                    <a href="" style="color: white;font-size:20px;">family | </a>
+                                    <span style="color: white;font-size:20px;">Duration:1h52m</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="1.jpg" alt="" width="100%" height="400px;">
+                        <div class="container khungtd">
+                            <h3 style="font-weight: bold;">WRATH OF THE TITANS
+                                <h3>
+                                    <a href="" style="color: white;font-size:20px;">fantasy</a>
+                                    <a href="" style="color: white; font-size:20px;">animation</a>
+                                    <a href="" style="color: white;font-size:20px;">family | </a>
+                                    <span style="color: white;font-size:20px;">Duration:1h52m</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="1.jpg" alt="" width="100%" height="400px;">
+                        <div class="container khungtd">
+                            <h3 style="font-weight: bold;">WRATH OF THE TITANS
+                                <h3>
+                                    <a href="" style="color: white;font-size:20px;">fantasy</a>
+                                    <a href="" style="color: white; font-size:20px;">animation</a>
+                                    <a href="" style="color: white;font-size:20px;">family | </a>
+                                    <span style="color: white;font-size:20px;">Duration:1h52m</span>
+                        </div>
+                    </div>
 
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
         </div>
+
     </div>
     <!-- hetkhoibaner -->
     <div class="container-fluid" style="background-color: rgb(255 255 255);" widtth="100%">
@@ -164,7 +172,7 @@
             </li>
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Genre</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" onclick="popular()">Action</a></li>
                 <li><a class="dropdown-item" href="#">anime</a></li>
                 <li><a class="dropdown-item" href="#">disney</a></li>
                 <li><a class="dropdown-item" href="#">Viet Nam</a></li>
@@ -205,4 +213,4 @@
 
 </body>
 
-</html>
+</html>s

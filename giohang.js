@@ -1,55 +1,68 @@
-loadgiohang = async() => {
+function loadgiohang() {
     let giohang = JSON.parse(localStorage.getItem('giohangcuatoi'));
-    try {
-        $("#giohang").empty();
-        giohang.forEach(async(movie, i) => {
-            const res = await axios.get(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=a7b3c9975791294647265c71224a88ad`);
-            $("#giohang").append(
-                `<div id=ctgiohang>
-                    <div id="ttsp" >
-                    <div> <img src="https://image.tmdb.org/t/p/original/${res.data.poster_path}" id="anhsp"></div>
-                    <div id="tensp">${movie.ten}</div>
+    $("#giohang").empty();
+    giohang.forEach((movie, i) => {
+            axios.get(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=a7b3c9975791294647265c71224a88ad`).then(
+                (res) => {
+                    $("#giohang").append(
+                        `<div id=ctgiohang>
+                        <div id="ttsp" >
+                        <div> <img src="https://image.tmdb.org/t/p/original/${res.data.poster_path}" id="anhsp"></div>
+                        <div id="tensp">${movie.ten}</div>
+                        </div>
+                        <div id="dgsp" >
+                        <span > ${movie.Giatien} </span> 
+                        </div>
+                        <div id= "slsp" >
+                        <input type = "number" value=${movie.soluong} onchange="onchang('${movie.ten}',this.value)">  
+                        <button onclick=remove(${i  })>xoa</button> 
+                        </div>
                     </div>
-                    <div id="dgsp" >
-                    <span > ${movie.Giatien} </span> 
-                    </div>
-                    <div id= "slsp" >
-                    <input type = "number" value=${movie.soluong} onchange="onchang('${movie.ten}',this.value)">  
-                    <button onclick=remove(${i})>xoa</button> 
-                    </div>
-                </div>
-               `)
-        })
-        localStorage.setItem('giohangcuatoi', JSON.stringify(giohang));
-        console.log('gio hang hien tai', giohang);
-    } catch (error) {
-        console.log(error);
-        console.log("fail 404");
-    }
+                   `)
+                },
+                (error) => { console.error }
+            )
+        }
+
+    )
+    localStorage.setItem('giohangcuatoi', JSON.stringify(giohang));
+    console.log('gio hang hien tai', giohang);
+
 }
 
-remove = async(vitricanxoa) => {
+function remove(vitricanxoa) {
     let giohang = JSON.parse(localStorage.getItem("giohangcuatoi"))
-    giohang.splice(vitricanxoa, 1);
-    $("#giohang").empty();
-    giohang.forEach(async(movie, i) => {
-        const res = await axios.get(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=a7b3c9975791294647265c71224a88ad`);
-        $("#giohang").append(
-            `<div id=ctgiohang>
-                <div id="ttsp" >
-                <div> <img src="https://image.tmdb.org/t/p/original/${res.data.poster_path}" id="anhsp"></div>
-                <div id="tensp">${movie.ten}</div>
-                </div>
-                <div id="dgsp" >
-                <span > ${movie.Giatien} </span> 
-                </div>
-                <div id= "slsp" >
-                <input type = "number" value=${movie.soluong} onchange="onchang('${movie.ten}',this.value)">  
-                </div>
-
-            </div>
-           `)
+    giohang.forEach((movie) => {
+        if (giohang.id === movie.id) {
+            giohang.splice(vitricanxoa, 1);
+        }
     })
+
+    $("#giohang").empty();
+    giohang.forEach((movie, i) => {
+            axios.get(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=a7b3c9975791294647265c71224a88ad`).then(
+                (res) => {
+                    $("#giohang").append(
+                        `<div id=ctgiohang>
+                        <div id="ttsp" >
+                        <div> <img src="https://image.tmdb.org/t/p/original/${res.data.poster_path}" id="anhsp"></div>
+                        <div id="tensp">${movie.ten}</div>
+                        </div>
+                        <div id="dgsp" >
+                        <span > ${movie.Giatien} </span> 
+                        </div>
+                        <div id= "slsp" >
+                        <input type = "number" value=${movie.soluong} onchange="onchang('${movie.ten}',this.value)">  
+                        <button onclick=remove(${i})>xoa</button> 
+                        </div>
+                    </div>
+                   `)
+                },
+                (error) => { console.error }
+            )
+        }
+
+    )
     localStorage.setItem('giohangcuatoi', JSON.stringify(giohang));
 }
 
