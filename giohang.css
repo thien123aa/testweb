@@ -106,10 +106,8 @@
 }
 
 #tongtien {
-    width: 50%;
-    height: 34px;
+    width: 100%;
+    height: 35px;
     margin-top: 6px;
-    margin-left: 43px;
-    background-color: green;
-    color: red;
+    margin-left: 20px;
 }
