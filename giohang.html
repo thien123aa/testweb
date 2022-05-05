@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script language="javascript" src="giohang.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script language="javascript" src="giohang.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/df5cc63e78.js" crossorigin="anonymous"></script>
@@ -13,11 +14,11 @@
     <title>Document</title>
 </head>
 
-<body onload="loadgiohang();tongtien()" style="background-color: #031c34;">
+<body onload="loadgiohang()" style="background-color: #031c34;">
     <div class="khoigiohang">
         <div class="header">
             <div class="banner">
-                <span style="color: white; font-family: Arial; font-weight: bold; font-size: 20px;"> THE BOX MOVIE | GIO HANG </span>
+                <span style="color: white; font-family: Arial; font-weight: bold; font-size: 20px;"> <a href="https://thien123aa.github.io/testweb/themoviebox.html" style="color: white; text-decoration: none;">THE BOX MOVIE </a> | GIỎ HÀNG </span>
             </div>
             <div class="khungsearch">
                 <form action="" class="top-search">
@@ -31,17 +32,13 @@
             <div class="khoisp">
                 <div class="ttgiohang">
                     <div class="sp">Sản phẩm</div>
-                    <div class="dg">Đơn giá</div>
+                    <div class="dg">Đơn giả</div>
                     <div class="sl">Số lượng</div>
                 </div>
                 <div id="giohang">
                 </div>
-                <div id="thanhtoan">
-                    <div id="td">
-                        <h3>tổng tiền thanh toán :</h3>
-                    </div>
-                    <div><input id="tongtien" type="number"></div>
-                </div>
+                <div id="tinhtien"></div>
+
             </div>
         </div>
 </body>
